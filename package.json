@@ -5,6 +5,7 @@
   "description": "Node.js Hello World app on CentOS using docker",
   "author": "Daniel Gasienica <daniel@gasienica.ch>",
   "dependencies": {
+  	"mongoose": "4.0.3",
     "express": "3.2.4"
   }
 }

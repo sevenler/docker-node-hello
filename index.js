@@ -1,4 +1,5 @@
 var express = require('express');
+require('./user');
 
 // Constants
 var DEFAULT_PORT = 8080;
@@ -9,6 +10,8 @@ var app = express();
 app.get('/', function (req, res) {
   res.send('This is Johnny\n');
 });
+
+
 
 app.listen(PORT)
 console.log('Running on http://localhost:' + PORT);
