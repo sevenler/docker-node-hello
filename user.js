@@ -38,7 +38,7 @@ exports.getUserByLoginName = function (loginName, callback) {
 };
 
 exports.find_user = function (){
-	UserProxy.getUserByLoginName('johnny', function(err, user){
+	exports.getUserByLoginName('johnny', function(err, user){
   	  	console.log(user);
   	});
 }
