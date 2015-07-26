@@ -33,4 +33,15 @@ exports.save_user = function() {
   user.save(function (err, data){ });
 };
 
+exports.getUserByLoginName = function (loginName, callback) {
+  User.findOne({'loginname': loginName}, callback);
+};
+
+exports.find_user = function (){
+	UserProxy.getUserByLoginName('johnny', function(err, user){
+  	  	console.log(user);
+  	});
+}
+
 exports.save_user();
+exports.find_user();
