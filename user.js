@@ -24,26 +24,15 @@ mongoose.connect(config.db, function (err) {
 
 User  = mongoose.model('User');
 
-exports.save_user = function() {
+exports.saveUser = function(nickname, loginname, password, callback) {
   var user         = new User();
-  user.nickname    = "Johnny";
-  user.loginname   = "Johnny";
-  user.password   = "password";
+  user.nickname    = nickname;
+  user.loginname   = loginname;
+  user.password   = password;
 
-  user.save(function (err, data){ 
-  	console.log(err, data, "=====");
-  });
+  user.save(callback);
 };
 
 exports.getUserByLoginName = function (loginName, callback) {
   User.findOne({'loginname': loginName}, callback);
 };
-
-exports.find_user = function (){
-	exports.getUserByLoginName('johnny', function(err, user){
-  	  	console.log(user);
-  	});
-}
-
-exports.save_user();
-exports.find_user();
