@@ -30,7 +30,9 @@ exports.save_user = function() {
   user.loginname   = "Johnny";
   user.password   = "password";
 
-  user.save(function (err, data){ });
+  user.save(function (err, data){ 
+  	console.log(err, data, "=====");
+  });
 };
 
 exports.getUserByLoginName = function (loginName, callback) {
