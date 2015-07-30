@@ -1,5 +1,6 @@
 var mongoose  = require('mongoose');
 var Schema    = mongoose.Schema;
+var config    = require('./config');
 
 var UserSchema = new Schema({
   nickname: { type: String},//昵称
@@ -11,9 +12,6 @@ mongoose.model('User', UserSchema);
 
 
 var mongoose = require('mongoose');
-var config = {
-	db: 'uozDROq0Vcg5QkT6:pbAMjWfdc8DgSomT6@10.10.72.139:27017/Ph17LyIrTEpl9xaz'
-}
 
 mongoose.connect(config.db, function (err) {
   if (err) {

@@ -2,7 +2,7 @@ var express = require('express');
 var user    = require('./user');
 
 // Constants
-var DEFAULT_PORT = 8080;
+var DEFAULT_PORT = 80;
 var PORT = process.env.PORT || DEFAULT_PORT;
 
 // App
