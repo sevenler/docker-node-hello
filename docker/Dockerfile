@@ -11,12 +11,11 @@ FROM    centos:6
 RUN     rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
 # Install Node.js and npm
 RUN     yum install -y npm
-RUN     yum install git
+RUN     yum install -y git
 
 # Clone code and install
-RUN mkdir /src; cd /src; 
-RUN git clone https://sevenler:tryourbest2015@github.com/sevenler/docker-node-hello.git;
-RUN npm install
+RUN mkdir src; cd src; git clone https://sevenler:tryourbest2015@github.com/sevenler/docker-node-hello.git;
+RUN cd src/docker-node-hello; ls; npm install;
 
 EXPOSE  80
 CMD ["node", "/src/index.js"]
