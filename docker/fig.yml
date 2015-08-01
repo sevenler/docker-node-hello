@@ -1,0 +1,19 @@
+
+web:
+	image: johnny/docker-hello
+	#执行的命令
+	#command: /bin/bash
+	ports:
+	 - "80:80"
+	#卷
+	# volumes:
+		# -.:figapp
+	links:
+	 - redis
+	#指定编译目录，会编译 . 目录下面的 Dockerfile
+	# build: .
+
+redis:
+	image:mongo
+	ports:
+	 - "27017:27017"
