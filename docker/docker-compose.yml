@@ -1,19 +1,21 @@
 
 web:
-    image: johnny/docker-hello
-    #执行的命令
+    # 指定image
+    #image: johnny/docker-hello
+    # 执行的命令
     #command: /bin/bash
     ports:
          - "80:80"
-    #卷
+    # 卷
     # volumes:
         # -.:figapp
     links:
          - mongo
-    #指定编译目录，会编译 . 目录下面的 Dockerfile
-    # build: .
+    # 指定编译目录，会编译 . 目录下面的 Dockerfile
+    build: .
 
 mongo:
-    image: mongo
+    #image: johnny/mongo
     ports:
          - "27017:27017"
+    build: ./mongo
