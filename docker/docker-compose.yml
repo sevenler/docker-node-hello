@@ -19,3 +19,17 @@ mongo:
     ports:
          - "27017:27017"
     build: ./mongo
+    #volumes_from:
+    #     - dbdata
+    volumes:
+         - /root/workspace/docker-node-hello/dbpath:/data/db
+    #command: ls /data/db/
+
+#dbdata:
+#    image: debian:wheezy
+    #数据库文件目录对应
+    #这篇文章把docker的volumes讲得比较清晰
+    #http://dockone.io/article/128 
+    #http://dockone.io/article/129  
+#    volumes:
+#         - /data/db
