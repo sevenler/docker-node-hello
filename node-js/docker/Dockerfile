@@ -15,7 +15,7 @@ RUN     yum install -y git
 
 # Clone code and install
 RUN git clone https://@github.com/sevenler/docker-node-hello.git;
-RUN cd docker-node-hello; npm install;
+RUN cd docker-node-hello/node-js/; npm install;
 
 EXPOSE  80
-CMD ["node", "/docker-node-hello/index.js"]
+CMD ["node", "/docker-node-hello/node-js/index.js"]
