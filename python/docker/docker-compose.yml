@@ -1,4 +1,4 @@
-web:
+webpython:
     ports:
          - "5000:5000"
     # 指定编译目录，会编译 . 目录下面的 Dockerfile
