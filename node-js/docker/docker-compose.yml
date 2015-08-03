@@ -21,8 +21,8 @@ mongo:
     build: ./mongo
     #volumes_from:
     #     - dbdata
-    volumes:
-         - /root/workspace/docker-node-hello/dbpath:/data/db
+    # volumes:
+         # - /root/workspace/docker-node-hello/dbpath:/data/db
     #command: ls /data/db/
 
 #dbdata:
